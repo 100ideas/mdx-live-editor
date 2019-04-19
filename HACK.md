@@ -11,6 +11,7 @@ problem: demo assigns `grip-horizontal` to Grid toolbar button. It doesn't show 
 solution: 
 - use different icon (`th-large`) from fontawesome v4
 - switch cdn to use.fontawesom.com for v5. but eww they are getting crazy commercial.
+- try `@fortawesome/react-fontawesome`
 
 in `node_modules/@axe312/easymde/src/js/easymde.js`
 
