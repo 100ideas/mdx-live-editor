@@ -2,15 +2,22 @@ import React, { useEffect, useRef, useState } from 'react'
 
 import mdxLiveEditor from '@mdx-live/editor'
 import styled from 'styled-components'
+import 'rbx/index.css'
 import '@axe312/easymde/dist/easymde.min.css'
 
+import { Button, Card, Container } from 'rbx'
 import Grid from './mdx/Grid'
 import defaultMarkdownValue from './default.md'
+
+import {rbxComponents, rbxKeys} from './mdx/Rbx'
 
 const Textarea = styled.textarea`
   min-width: 100vw;
   min-height: 100vh;
 `
+
+// const rbxlist = () => <Container>{rbxKeys}</Container>
+// console.log(rbxComponents)
 
 const components = [
   {
@@ -24,7 +31,11 @@ const components = [
   <img src="https://source.unsplash.com/weekly?nature" alt="" />
   <img src="https://source.unsplash.com/weekly?air" alt="" />
 </Grid>`
-  }
+  },
+  { tagname: 'Card', component: Card },
+  { tagname: 'Button', component: Button },
+  ...rbxComponents
+
 ]
 
 const replacements = {

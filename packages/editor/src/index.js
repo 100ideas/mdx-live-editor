@@ -6,6 +6,8 @@ import MDX from '@mdx-js/runtime'
 
 import Toolbar from './Toolbar'
 
+import { Container } from 'rbx'
+
 export default function editor({
   components = [],
   replacements = {},
@@ -36,9 +38,11 @@ export default function editor({
     previewRender: plainText => {
       try {
         return renderToStaticMarkup(
-          <MDX components={replacements} scope={scope}>
-            {plainText}
-          </MDX>
+          <Container fluid style={{ margin: 0}}>
+            <MDX components={replacements} scope={scope}>
+              {plainText}
+            </MDX>
+          </Container>
         )
       } catch (err) {
         console.error(err)

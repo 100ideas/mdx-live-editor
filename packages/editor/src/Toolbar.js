@@ -19,7 +19,7 @@ export default function toolbar({ toolbar = null, components = [] }) {
     },
     className: `fa fa-${icon}`,
     title
-  }))
+  })).filter( ({title, className}) => title !== null && className.endsWith('fa-'))
   const mdxHelpButton = {
     name: 'custom',
     action: function customFunction(editor) {

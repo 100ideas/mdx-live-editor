@@ -8,6 +8,7 @@
     "@axe312/easymde@npm:easymde": "^2.6.1-157.0",
     "@mdx-live/editor": "^0.0.5",
     "prop-types": "^15.7.2",
+    "rbx": "^2.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "styled-components": "^4.2.0"
