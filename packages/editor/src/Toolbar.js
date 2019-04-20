@@ -30,8 +30,8 @@ export default function toolbar({ toolbar = null, components = [] }) {
       }
       helpWindow.innerHTML = components
         .map(
-          ({ title, description, demo }) =>
-            `<h1>${title}</h1><p>${description}</p><pre><code>${encode(
+          ({ title, tagname, description, demo = '' }) => 
+            `<h1>${title === undefined ? tagname : title}</h1><p>${description}</p><pre><code>${encode(
               demo
             )}</code></pre>`
         )
